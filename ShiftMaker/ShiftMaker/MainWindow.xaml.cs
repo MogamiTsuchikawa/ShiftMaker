@@ -24,5 +24,26 @@ namespace ShiftMaker
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            string[] test_name = { "A","B","C","D","E","F"};
+            int x = 1, y = 1;
+            while (x < 13)
+            {
+                y = 1;
+                while (y < 27)
+                {
+                    string combo_name = "C" + x.ToString() + "_" + y.ToString();
+                    ComboBox target_combo = this.FindName(combo_name) as ComboBox;
+                    if(target_combo != null)
+                    {
+                        foreach(string name in test_name)target_combo.Items.Add(name);
+                    }
+                    ++y;
+                }
+                ++x;
+            }
+        }
     }
 }

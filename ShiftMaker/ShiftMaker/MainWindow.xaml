@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShiftMaker"
         mc:Ignorable="d"
-        Title="シフト作成ツール" Height="450" Width="800">
+        Title="シフト作成ツール" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -18,6 +18,8 @@
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="2"/>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="2"/>
                 <ColumnDefinition Width="1*"/>
@@ -34,75 +36,2199 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="7*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1" Background="Aqua"/>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="受" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="付" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3" Background="Aqua"/>
+                <Grid Grid.Row="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="物" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="療" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5" Background="Aqua"/>
+                <Grid Grid.Row="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="P" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="T" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua"/>
+                <Grid Grid.Row="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="診" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="療" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" Background="Aqua" />
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" HorizontalAlignment="Center">
                     <Label Content="月"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="Aqua" />
-            </Grid>
-            <Grid Grid.Column="1" Background="Aqua"/>
-            <Grid Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="25"/>
-                    <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" HorizontalAlignment="Center">
-                    <Label Content="火"/>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_1"/>
+                    </Grid>
                 </Grid>
-                <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C1_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C2_26"/>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid Grid.Column="3" Background="Aqua"/>
             <Grid Grid.Column="4">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" HorizontalAlignment="Center">
-                    <Label Content="水"/>
+                    <Label Content="火"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_1"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C3_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C4_26"/>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid Grid.Column="5" Background="Aqua"/>
             <Grid Grid.Column="6">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" HorizontalAlignment="Center">
-                    <Label Content="木"/>
+                    <Label Content="水"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_1"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C5_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C6_26"/>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid Grid.Column="7" Background="Aqua"/>
             <Grid Grid.Column="8">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" HorizontalAlignment="Center">
-                    <Label Content="金"/>
+                    <Label Content="木"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_1"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C7_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C8_26"/>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid Grid.Column="9" Background="Aqua"/>
             <Grid Grid.Column="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="25"/>
                     <RowDefinition Height="3"/>
-                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" HorizontalAlignment="Center">
+                    <Label Content="金"/>
+                </Grid>
+                <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_1"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C9_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C10_26"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="11" Background="Aqua"/>
+            <Grid Grid.Column="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" HorizontalAlignment="Center">
                     <Label Content="土"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="Aqua" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_1"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_1"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_2"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_2"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_3"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_3"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_4"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_4"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_5"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_5"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="7" Background="Aqua" />
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_6"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_6"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_7"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_7"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_8"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_8"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_9"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_9"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_10"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_10"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_11"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_11"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="14">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_12"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_12"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="15" Background="Aqua" />
+                <Grid Grid.Row="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_13"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_13"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="17">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_14"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_14"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_15"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_15"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="19">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_16"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_16"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_17"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_17"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="21">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_18"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_18"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_19"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_19"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="23" Background="Aqua" />
+                <Grid Grid.Row="24">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_20"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_20"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_21"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_21"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="26">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_22"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_22"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="27">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_23"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_23"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="28">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_24"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_24"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="29">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_25"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_25"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <ComboBox Name="C11_26"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <ComboBox Name="C12_26"/>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
-        
+
 
     </Grid>
 </Window>
