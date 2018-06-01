@@ -1,0 +1,15 @@
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\bin\Debug\ShiftMaker.exe.config
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\bin\Debug\ShiftMaker.exe
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\bin\Debug\ShiftMaker.pdb
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.csprojAssemblyReference.cache
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\MainWindow.g.cs
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\App.g.cs
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker_MarkupCompile.cache
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker_MarkupCompile.lref
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\MainWindow.baml
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.g.resources
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.Properties.Resources.resources
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.csproj.GenerateResource.cache
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.csproj.CoreCompileInputs.cache
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.exe
+C:\Users\Mogami\AppData\Local\Temporary Projects\ShiftMaker\obj\Debug\ShiftMaker.pdb
