@@ -28,3 +28,16 @@ D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\ShiftMaker.csproj.Ge
 D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\ShiftMaker.csproj.CoreCompileInputs.cache
 D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\ShiftMaker.exe
 D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\ShiftMaker.pdb
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\SaveWindow.g.cs
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\SaveWindow.baml
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\ClosedXML.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\ExcelNumberFormat.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\FastMember.Signed.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\System.IO.Packaging.dll
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\ClosedXML.pdb
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\ClosedXML.xml
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\bin\Debug\ExcelNumberFormat.xml
+D:\Documents\Git\ShiftMaker\ShiftMaker\ShiftMaker\obj\Debug\ShiftMaker.csproj.CopyComplete

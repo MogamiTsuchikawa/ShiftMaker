@@ -13,7 +13,11 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Menu Background="LightGray">
-                <MenuItem />
+                <MenuItem x:Name="OpenMenu" Header="Open" Click="OpenMenu_Click"/>
+                <MenuItem x:Name="SaveMenu" Header="Save" Click="SaveMenu_Click"/>
+                <MenuItem x:Name="SaveAsMenu" Header="Save As .." Click="SaveAsMenu_Click"/>
+                <MenuItem x:Name="DATE" Header="Null/Null/Null～Null/Null" />
+                <MenuItem x:Name="ExportToExcelMenu" Header="Export to Excel" Click="ExportToExcelMenu_Click"/>
             </Menu>
         </Grid>
         <Grid Grid.Row="1">
