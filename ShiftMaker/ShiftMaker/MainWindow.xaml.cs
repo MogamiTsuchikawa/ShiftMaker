@@ -32,7 +32,9 @@ namespace ShiftMaker
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            string[] test_name = { "","太田","八木","山本","加藤","愛奈","一木","沖山","市川", "恵梨佳", "新村", "長谷川", "下玉利", "尚子", "宝田", "森", "野田" };
+            var name_set = new System.IO.StreamReader("name.txt");
+            string[] names = name_set.ReadToEnd().Split(',');
+            //string[] test_name = { "","太田","八木","山本","加藤","愛奈","一木","沖山","市川", "恵梨佳", "新村", "長谷川", "下玉利", "尚子", "宝田", "森", "野田" };
             int x = 1, y = 1;
             while (x < 13)
             {
@@ -44,7 +46,7 @@ namespace ShiftMaker
                     //target_combo.
                     if(target_combo != null)
                     {
-                        foreach(string name in test_name)target_combo.Items.Add(name);
+                        foreach(string name in names)target_combo.Items.Add(name);
                     }
                     ++y;
                 }
